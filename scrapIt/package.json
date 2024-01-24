@@ -1,0 +1,14 @@
+{
+  "name": "scrapit",
+  "version": "1.0.0",
+  "description": "Trying out scrape it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rohit Jain",
+  "license": "ISC",
+  "dependencies": {
+    "scrape-it": "^6.1.0"
+  }
+}
