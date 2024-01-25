@@ -1,7 +1,7 @@
 const scrapeIt = require("scrape-it")
 
 // Promise interface
-scrapeIt("https://github.com/IonicaBizau/scrape-it", {
+scrapeIt("https://ionicabizau.net", {
     title: ".header h1"
   , desc: ".header h2"
   , avatar: {
@@ -12,32 +12,32 @@ scrapeIt("https://github.com/IonicaBizau/scrape-it", {
     console.log(`Status Code: ${status}`)
     console.log(data)
 });
-const scrapeIt = require("scrape-it");
+// const scrapeIt = require("scrape-it");
 
 // Define the URL or HTML content
-let urlOrHtml = 'https://en.wikipedia.org/wiki/Indus_Valley_Civilisation';
+// let urlOrHtml = 'https://en.wikipedia.org/wiki/Indus_Valley_Civilisation';
 
-scrapeIt(urlOrHtml, {
-    // Define the structure of the scraped data
-    contents: {
-        listItem: ".vector-toc-contents .vector-toc-list-item",
-        data: {
-            title: {
-                selector: ".vector-toc-text",
-                how: "text"
-            },
-            link: {
-                selector: ".vector-toc-link",
-                attr: "href"
-            }
-        }
-    }
-}, (err, { data }) => {
-    console.log(err || data);
-}).then(({ data, status }) => {
-    console.log(`Status Code: ${status}`)
-    console.log(data)
-})
+// scrapeIt(urlOrHtml, {
+//     // Define the structure of the scraped data
+    // contents: {
+    //     listItem: ".vector-toc-contents .vector-toc-list-item",
+    //     data: {
+    //         title: {
+    //             selector: ".vector-toc-text",
+    //             how: "text"
+    //         },
+    //         link: {
+    //             selector: ".vector-toc-link",
+    //             attr: "href"
+    //         }
+    //     }
+    // }
+// }, (err, { data }) => {
+//     console.log(err || data);
+// }).then(({ data, status }) => {
+//     console.log(`Status Code: ${status}`)
+//     console.log(data)
+// })
 
 
 

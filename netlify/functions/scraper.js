@@ -3,7 +3,17 @@ const scrapeIt = require("scrape-it");
 exports.handler = async function(event, context) {
     const { url, contents } = JSON.parse(event.body);
 
-    return scrapeIt(url, {contents})
+    try {
+        var contentsJSON = JSON.parse(contents);
+        // Now contentsJSON is a JavaScript object
+        console.log(contentsJSON);
+    } catch (e) {
+        console.error("Parsing error:", e);
+        // Handle the error if the string is not valid JSON
+    }
+
+
+    return scrapeIt(url, contents)
         .then(({ data, response }) => ({
             statusCode: 200,
             body: JSON.stringify({ data, status: response.statusCode }, null, 2),
