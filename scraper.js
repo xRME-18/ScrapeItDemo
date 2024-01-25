@@ -1,18 +1,18 @@
 const scrapeIt = require("scrape-it")
 
 // Promise interface
-// scrapeIt("https://github.com/IonicaBizau/scrape-it", {
-//     title: ".header h1"
-//   , desc: ".header h2"
-//   , avatar: {
-//         selector: ".header img"
-//       , attr: "src"
-//     }
-// }).then(({ data, status }) => {
-//     console.log(`Status Code: ${status}`)
-//     console.log(data)
-// });
-// const scrapeIt = require("scrape-it");
+scrapeIt("https://github.com/IonicaBizau/scrape-it", {
+    title: ".header h1"
+  , desc: ".header h2"
+  , avatar: {
+        selector: ".header img"
+      , attr: "src"
+    }
+}).then(({ data, status }) => {
+    console.log(`Status Code: ${status}`)
+    console.log(data)
+});
+const scrapeIt = require("scrape-it");
 
 // Define the URL or HTML content
 let urlOrHtml = 'https://en.wikipedia.org/wiki/Indus_Valley_Civilisation';

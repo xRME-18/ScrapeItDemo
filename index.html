@@ -4,12 +4,17 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <form id="scrapeForm">
-        <input type="text" id="urlInput" placeholder="Enter URL">
-        <input type="text" id="contentsInput" placeholder="Enter contents">
-        <button type="submit">Scrape</button>
-    </form>
-    <div id="results"></div>
+    <div class="container">
+        <h1>Web Scraper</h1>
+        <form id="scrapeForm">
+            <label for="urlInput">URL:</label>
+            <input type="text" id="urlInput" placeholder="Enter URL">
+            <label for="contentsInput">Contents:</label>
+            <textarea id="contentsInput" rows="10" placeholder="Enter contents"></textarea>
+            <button type="submit">Scrape</button>
+        </form>
+        <div id="results"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
